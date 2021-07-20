@@ -3,7 +3,7 @@
     <entity name="Hero" representedClassName="Hero" syncable="YES" codeGenerationType="class">
         <attribute name="apperarance" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="avatar" optional="YES" attributeType="Binary"/>
-        <attribute name="continue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="continueYears" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="expend" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isHuman" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
