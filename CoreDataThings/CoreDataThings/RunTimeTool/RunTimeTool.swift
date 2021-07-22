@@ -9,11 +9,13 @@ import Foundation
 
 public class RunTimeTool
 {
+    
     public static func getPropertyName(parameter: UnsafePointer<CChar>) -> String?
     {
         return String(utf8String: parameter)
     }
     
+    /// 获取对应数据类型的字符串(通过反射获取的类，不能使用isKindOfClass)
     public static func getPropertyType(parameter: UnsafePointer<CChar>?) -> String?
     {
         guard let up = parameter,

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A2066D026A9593800425B1F /* NSManagerObject+Y.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2066CF26A9593700425B1F /* NSManagerObject+Y.swift */; };
+		9A2066D326A966B700425B1F /* UIImage+Y.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2066D226A966B700425B1F /* UIImage+Y.swift */; };
 		9A27D80B26A6CDF100B7F5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27D80A26A6CDF100B7F5CB /* AppDelegate.swift */; };
 		9A27D80D26A6CDF100B7F5CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27D80C26A6CDF100B7F5CB /* SceneDelegate.swift */; };
 		9A27D80F26A6CDF100B7F5CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27D80E26A6CDF100B7F5CB /* ViewController.swift */; };
@@ -16,9 +18,12 @@
 		9A27D81A26A6CDF400B7F5CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A27D81826A6CDF400B7F5CB /* LaunchScreen.storyboard */; };
 		9A27D82326A6CE1000B7F5CB /* CDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27D82226A6CE1000B7F5CB /* CDManager.swift */; };
 		9AE78DE626A6D261004FA715 /* RunTimeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE78DE526A6D261004FA715 /* RunTimeTool.swift */; };
+		9AE78DE826A6D78A004FA715 /* CDSaveDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE78DE726A6D78A004FA715 /* CDSaveDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A2066CF26A9593700425B1F /* NSManagerObject+Y.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagerObject+Y.swift"; sourceTree = "<group>"; };
+		9A2066D226A966B700425B1F /* UIImage+Y.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Y.swift"; sourceTree = "<group>"; };
 		9A27D80726A6CDF100B7F5CB /* CoreDataThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A27D80A26A6CDF100B7F5CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A27D80C26A6CDF100B7F5CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		9A27D81B26A6CDF400B7F5CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A27D82226A6CE1000B7F5CB /* CDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDManager.swift; sourceTree = "<group>"; };
 		9AE78DE526A6D261004FA715 /* RunTimeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTimeTool.swift; sourceTree = "<group>"; };
+		9AE78DE726A6D78A004FA715 /* CDSaveDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSaveDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A2066D126A966A900425B1F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9A2066D226A966B700425B1F /* UIImage+Y.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		9A27D7FE26A6CDF100B7F5CB = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +76,7 @@
 		9A27D80926A6CDF100B7F5CB /* CoreDataThings */ = {
 			isa = PBXGroup;
 			children = (
+				9A2066D126A966A900425B1F /* Extension */,
 				9AE78DE426A6D248004FA715 /* RunTimeTool */,
 				9A27D82126A6CE0300B7F5CB /* CoreDataManager */,
 				9A27D80A26A6CDF100B7F5CB /* AppDelegate.swift */,
@@ -80,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				9A27D82226A6CE1000B7F5CB /* CDManager.swift */,
+				9AE78DE726A6D78A004FA715 /* CDSaveDataProtocol.swift */,
+				9A2066CF26A9593700425B1F /* NSManagerObject+Y.swift */,
 			);
 			path = CoreDataManager;
 			sourceTree = "<group>";
@@ -163,11 +180,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE78DE626A6D261004FA715 /* RunTimeTool.swift in Sources */,
+				9A2066D326A966B700425B1F /* UIImage+Y.swift in Sources */,
+				9A2066D026A9593800425B1F /* NSManagerObject+Y.swift in Sources */,
 				9A27D80F26A6CDF100B7F5CB /* ViewController.swift in Sources */,
 				9A27D82326A6CE1000B7F5CB /* CDManager.swift in Sources */,
 				9A27D80B26A6CDF100B7F5CB /* AppDelegate.swift in Sources */,
 				9A27D80D26A6CDF100B7F5CB /* SceneDelegate.swift in Sources */,
 				9A27D81526A6CDF100B7F5CB /* CoreDataThings.xcdatamodeld in Sources */,
+				9AE78DE826A6D78A004FA715 /* CDSaveDataProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
