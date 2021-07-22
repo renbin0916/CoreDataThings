@@ -51,10 +51,10 @@ extension CDManager
         saveContext()
     }
     
-    public func fetchEntity<T: NSManagedObject>(predicate: NSPredicate? = nil,
-                                                sorts: [NSSortDescriptor]? = nil,
-                                                offset: Int? = nil,
-                                                limit: Int? = nil) -> [T]?
+    public func fetchEntity<T: NSObject>(predicate: NSPredicate? = nil,
+                                         sorts: [NSSortDescriptor]? = nil,
+                                         offset: Int? = nil,
+                                         limit: Int? = nil) -> [T]?
     {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "\(T.self)")
         if predicate != nil

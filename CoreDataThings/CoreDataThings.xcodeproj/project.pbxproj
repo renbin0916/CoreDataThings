@@ -17,6 +17,8 @@
 		9A27D81726A6CDF400B7F5CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A27D81626A6CDF400B7F5CB /* Assets.xcassets */; };
 		9A27D81A26A6CDF400B7F5CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A27D81826A6CDF400B7F5CB /* LaunchScreen.storyboard */; };
 		9A27D82326A6CE1000B7F5CB /* CDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27D82226A6CE1000B7F5CB /* CDManager.swift */; };
+		9A7681F226A96DC8003AA72A /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7681F126A96DC8003AA72A /* Ability.swift */; };
+		9A7681F426A97792003AA72A /* AbilityTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7681F326A97792003AA72A /* AbilityTransformer.swift */; };
 		9AE78DE626A6D261004FA715 /* RunTimeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE78DE526A6D261004FA715 /* RunTimeTool.swift */; };
 		9AE78DE826A6D78A004FA715 /* CDSaveDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE78DE726A6D78A004FA715 /* CDSaveDataProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 		9A27D81926A6CDF400B7F5CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A27D81B26A6CDF400B7F5CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A27D82226A6CE1000B7F5CB /* CDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDManager.swift; sourceTree = "<group>"; };
+		9A7681F126A96DC8003AA72A /* Ability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
+		9A7681F326A97792003AA72A /* AbilityTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityTransformer.swift; sourceTree = "<group>"; };
 		9AE78DE526A6D261004FA715 /* RunTimeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTimeTool.swift; sourceTree = "<group>"; };
 		9AE78DE726A6D78A004FA715 /* CDSaveDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSaveDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +86,8 @@
 				9A27D80A26A6CDF100B7F5CB /* AppDelegate.swift */,
 				9A27D80C26A6CDF100B7F5CB /* SceneDelegate.swift */,
 				9A27D80E26A6CDF100B7F5CB /* ViewController.swift */,
+				9A7681F126A96DC8003AA72A /* Ability.swift */,
+				9A7681F326A97792003AA72A /* AbilityTransformer.swift */,
 				9A27D81026A6CDF100B7F5CB /* Main.storyboard */,
 				9A27D81626A6CDF400B7F5CB /* Assets.xcassets */,
 				9A27D81826A6CDF400B7F5CB /* LaunchScreen.storyboard */,
@@ -185,8 +191,10 @@
 				9A27D80F26A6CDF100B7F5CB /* ViewController.swift in Sources */,
 				9A27D82326A6CE1000B7F5CB /* CDManager.swift in Sources */,
 				9A27D80B26A6CDF100B7F5CB /* AppDelegate.swift in Sources */,
+				9A7681F226A96DC8003AA72A /* Ability.swift in Sources */,
 				9A27D80D26A6CDF100B7F5CB /* SceneDelegate.swift in Sources */,
 				9A27D81526A6CDF100B7F5CB /* CoreDataThings.xcdatamodeld in Sources */,
+				9A7681F426A97792003AA72A /* AbilityTransformer.swift in Sources */,
 				9AE78DE826A6D78A004FA715 /* CDSaveDataProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Difficult" representedClassName="Difficult" syncable="YES" codeGenerationType="class">
+        <attribute name="ability" optional="YES" attributeType="Transformable" valueTransformerName="AbilityTransformer" customClassName="Ability"/>
+    </entity>
     <entity name="Hero" representedClassName="Hero" syncable="YES" codeGenerationType="class">
         <attribute name="apperarance" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="avatar" optional="YES" attributeType="Binary"/>
@@ -13,6 +16,7 @@
         <attribute name="weight" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
+        <element name="Difficult" positionX="-54" positionY="63" width="128" height="44"/>
         <element name="Hero" positionX="-63" positionY="-18" width="128" height="179"/>
     </elements>
 </model>
