@@ -28,15 +28,6 @@ class ViewController: UIViewController
         CDManager.shared.saveEntity(Difficult.self, info: ["ability" : ability])
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let abilities: [Difficult] = CDManager.shared.fetchEntity()
-        {
-            for item in abilities
-            {
-                debugPrint(item.ability?.name)
-            }
-        }
-    }
 }
 
 

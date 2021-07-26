@@ -26,7 +26,7 @@ public class RunTimeTool
         return String(utf8String: parameter)
     }
     
-    /// 获取对应数据类型的字符串(通过反射获取的类，不能使用isKindOfClass)
+    /// 获取对应数据类型的字符串
     public func getPropertyType(parameter: UnsafePointer<CChar>?) -> String?
     {
         guard let up = parameter,
@@ -78,14 +78,7 @@ public class RunTimeTool
         else
         {
             let temp = typeString.replacingOccurrences(of: "\"", with: "")
-            for className in _classNameArray
-            {
-                if temp.hasSuffix(className)
-                {
-                    resultTypeString = className
-                    break
-                }
-            }
+            resultTypeString = _classNameArray.first(where: { temp.hasSuffix($0) })
         }
         return resultTypeString
     }
