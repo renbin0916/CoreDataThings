@@ -9,64 +9,83 @@ import Foundation
 
 public class RunTimeTool
 {
+    public static let shared = RunTimeTool()
     
-    public static func getPropertyName(parameter: UnsafePointer<CChar>) -> String?
+    private init() {}
+    
+    public var classArray: [AnyClass] = []
+    private var _classNameArray: Set<String> = []
+    
+    public static func register(_ classT: AnyObject.Type)
+    {
+        RunTimeTool.shared._classNameArray.insert("\(classT.self)")
+    }
+    
+    public func getPropertyName(parameter: UnsafePointer<CChar>) -> String?
     {
         return String(utf8String: parameter)
     }
     
     /// 获取对应数据类型的字符串(通过反射获取的类，不能使用isKindOfClass)
-    public static func getPropertyType(parameter: UnsafePointer<CChar>?) -> String?
+    public func getPropertyType(parameter: UnsafePointer<CChar>?) -> String?
     {
         guard let up = parameter,
               let resultUsedParameter = String(utf8String: up),
               let typeString = resultUsedParameter.components(separatedBy: ",").first
         else { return nil }
         
-        let resultTypeString: String?
-        if typeString.contains("NSDate")
+        var resultTypeString: String? = nil
+        if typeString == "T@\"NSDate\""
         {
             resultTypeString = "NSDate"
         }
-        else if typeString.contains("NSData")
+        else if typeString == "T@\"NSData\""
         {
             resultTypeString = "NSData"
         }
-        else if typeString.contains("Tq")
+        else if typeString == "Tq"
         {
             resultTypeString = "Int64"
         }
-        else if typeString.contains("Td")
+        else if typeString == "Td"
         {
             resultTypeString = "Double"
         }
-        else if typeString.contains("Ts")
+        else if typeString == "Ts"
         {
             resultTypeString = "Int16"
         }
-        else if typeString.contains("TB")
+        else if typeString == "TB"
         {
             resultTypeString = "Bool"
         }
-        else if typeString.contains("NSString")
+        else if typeString == "T@\"NSString\""
         {
             resultTypeString = "NSString"
         }
-        else if typeString.contains("Tf")
+        else if typeString == "Tf"
         {
             resultTypeString = "Float"
         }
-        else if typeString.contains("NSDecimalNumber")
+        else if typeString == "T@\"NSDecimalNumber\""
         {
             resultTypeString = "NSDecimalNumber"
         }
-        else if typeString.contains("Ti")
+        else if typeString == "Ti"
         {
             resultTypeString = "Int32"
         }
         else
         {
-            resultTypeString = nil
+            let temp = typeString.replacingOccurrences(of: "\"", with: "")
+            for className in _classNameArray
+            {
+                if temp.hasSuffix(className)
+                {
+                    resultTypeString = className
+                    break
+                }
+            }
         }
         return resultTypeString
     }

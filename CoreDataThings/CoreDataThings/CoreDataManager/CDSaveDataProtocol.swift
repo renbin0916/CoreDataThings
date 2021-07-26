@@ -23,68 +23,63 @@ extension CDSaveDataProtocol
             let ut = propertyList![Int(item)]
             let name = property_getName(ut)
             let nameType = property_getAttributes(ut)
-            if let pName = RunTimeTool.getPropertyName(parameter: name),
-               let pTypeString = RunTimeTool.getPropertyType(parameter: nameType),
+            if let pName = RunTimeTool.shared.getPropertyName(parameter: name),
                let value = data[pName]
             {
-                switch pTypeString
+                if let pTypeString = RunTimeTool.shared.getPropertyType(parameter: nameType)
                 {
-                case "NSDate":
-                    if let uv = value as? NSDate
+                    switch pTypeString
                     {
-                        setValue(uv, forKey: pName)
+                    case "NSDate":
+                        if let uv = value as? NSDate {
+                            setValue(uv, forKey: pName)
+                        }
+                    case "NSData":
+                        if let uv = value as? NSData {
+                            setValue(uv, forKey: pName)
+                        }
+                    case "Int64":
+                        if let uv = value as? Int64 {
+                            setValue(uv, forKey: pName)
+                        }
+                    case "Double":
+                        if let uv = value as? Double {
+                            setValue(uv, forKey: pName)
+                        }
+                    case "Int16":
+                        if let uv = value as? Int16 {
+                            setValue(uv, forKey: pName)
+                        }
+                    case "Bool":
+                        if let uv = value as? Bool {
+                            setValue(uv, forKey: pName)
+                        }
+                    case "NSString":
+                        if let uv = value as? NSString {
+                            setValue(uv, forKey: pName)
+                        }
+                    case "Float":
+                        if let uv = value as? Float {
+                            setValue(uv, forKey: pName)
+                        }
+                    case "NSDecimalNumber":
+                        if let uv = value as? NSDecimalNumber {
+                            setValue(uv, forKey: pName)
+                        }
+                    case "Int32":
+                        if let uv = value as? Int32 {
+                            setValue(uv, forKey: pName)
+                        }
+                    default:
+                        if let uv = value as? CDTransformerProtocol,
+                           uv.y_className() == pTypeString
+                        {
+                            setValue(uv, forKey: pName)
+                        }
                     }
-                case "NSData":
-                    if let uv = value as? NSData
-                    {
-                        setValue(uv, forKey: pName)
-                    }
-                case "Int64":
-                    if let uv = value as? Int64
-                    {
-                        setValue(uv, forKey: pName)
-                    }
-                case "Double":
-                    if let uv = value as? Double
-                    {
-                        setValue(uv, forKey: pName)
-                    }
-                case "Int16":
-                    if let uv = value as? Int16
-                    {
-                        setValue(uv, forKey: pName)
-                    }
-                case "Bool":
-                    if let uv = value as? Bool
-                    {
-                        setValue(uv, forKey: pName)
-                    }
-                case "NSString":
-                    if let uv = value as? NSString
-                    {
-                        setValue(uv, forKey: pName)
-                    }
-                case "Float":
-                    if let uv = value as? Float
-                    {
-                        setValue(uv, forKey: pName)
-                    }
-                case "NSDecimalNumber":
-                    if let uv = value as? NSDecimalNumber
-                    {
-                        setValue(uv, forKey: pName)
-                    }
-                case "Int32":
-                    if let uv = value as? Int32
-                    {
-                        setValue(uv, forKey: pName)
-                    }
-                default:
-                    debugPrint("未能解析")
                 }
                 
             }
-            
         }
     }
 }

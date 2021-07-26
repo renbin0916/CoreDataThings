@@ -13,20 +13,32 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-//
-//        if let abilities: [Difficult] = CDManager.shared.fetchEntity()
-//        {
-//            for item in abilities
-//            {
-//                debugPrint(item.ability)
-//            }
-//        }
-//        let ability = Ability(with: "破坏死光2", destructivePower: 199999, couldRestoreVitality: false, color: .red, locations: [])
-//
-//        CDManager.shared.saveEntity(Difficult.self, info: ["ability" : ability])
+        
+        if let abilities: [Difficult] = CDManager.shared.fetchEntity()
+        {
+            for item in abilities
+            {
+                CDManager.shared.context.delete(item)
+                debugPrint(item.ability)
+            }
+            CDManager.shared.saveContext()
+        }
+        let ability = Ability(with: "破坏死光2", destructivePower: 199999, couldRestoreVitality: false, color: .red, locations: [])
+
+        CDManager.shared.saveEntity(Difficult.self, info: ["ability" : ability])
     }
 
-    let hero = Hero()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let abilities: [Difficult] = CDManager.shared.fetchEntity()
+        {
+            for item in abilities
+            {
+                debugPrint(item.ability?.name)
+            }
+        }
+    }
 }
+
+
 
 

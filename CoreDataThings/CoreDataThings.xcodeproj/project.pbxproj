@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1E293226AAB4940028194C /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E293126AAB4940028194C /* TestModel.swift */; };
 		9A2066D026A9593800425B1F /* NSManagerObject+Y.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2066CF26A9593700425B1F /* NSManagerObject+Y.swift */; };
 		9A2066D326A966B700425B1F /* UIImage+Y.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2066D226A966B700425B1F /* UIImage+Y.swift */; };
 		9A27D80B26A6CDF100B7F5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27D80A26A6CDF100B7F5CB /* AppDelegate.swift */; };
@@ -17,6 +18,8 @@
 		9A27D81726A6CDF400B7F5CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A27D81626A6CDF400B7F5CB /* Assets.xcassets */; };
 		9A27D81A26A6CDF400B7F5CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A27D81826A6CDF400B7F5CB /* LaunchScreen.storyboard */; };
 		9A27D82326A6CE1000B7F5CB /* CDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27D82226A6CE1000B7F5CB /* CDManager.swift */; };
+		9A4038C826AA5B2800BD3799 /* CDTransformerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4038C726AA5B2800BD3799 /* CDTransformerProtocol.swift */; };
+		9A4038CB26AA5C7600BD3799 /* NSObject+Y.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4038CA26AA5C7600BD3799 /* NSObject+Y.swift */; };
 		9A7681F226A96DC8003AA72A /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7681F126A96DC8003AA72A /* Ability.swift */; };
 		9A7681F426A97792003AA72A /* AbilityTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7681F326A97792003AA72A /* AbilityTransformer.swift */; };
 		9AE78DE626A6D261004FA715 /* RunTimeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE78DE526A6D261004FA715 /* RunTimeTool.swift */; };
@@ -24,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A1E293126AAB4940028194C /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		9A2066CF26A9593700425B1F /* NSManagerObject+Y.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagerObject+Y.swift"; sourceTree = "<group>"; };
 		9A2066D226A966B700425B1F /* UIImage+Y.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Y.swift"; sourceTree = "<group>"; };
 		9A27D80726A6CDF100B7F5CB /* CoreDataThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +40,8 @@
 		9A27D81926A6CDF400B7F5CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A27D81B26A6CDF400B7F5CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A27D82226A6CE1000B7F5CB /* CDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDManager.swift; sourceTree = "<group>"; };
+		9A4038C726AA5B2800BD3799 /* CDTransformerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTransformerProtocol.swift; sourceTree = "<group>"; };
+		9A4038CA26AA5C7600BD3799 /* NSObject+Y.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Y.swift"; sourceTree = "<group>"; };
 		9A7681F126A96DC8003AA72A /* Ability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
 		9A7681F326A97792003AA72A /* AbilityTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityTransformer.swift; sourceTree = "<group>"; };
 		9AE78DE526A6D261004FA715 /* RunTimeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTimeTool.swift; sourceTree = "<group>"; };
@@ -57,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				9A2066D226A966B700425B1F /* UIImage+Y.swift */,
+				9A4038CA26AA5C7600BD3799 /* NSObject+Y.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -86,6 +93,7 @@
 				9A27D80A26A6CDF100B7F5CB /* AppDelegate.swift */,
 				9A27D80C26A6CDF100B7F5CB /* SceneDelegate.swift */,
 				9A27D80E26A6CDF100B7F5CB /* ViewController.swift */,
+				9A1E293126AAB4940028194C /* TestModel.swift */,
 				9A7681F126A96DC8003AA72A /* Ability.swift */,
 				9A7681F326A97792003AA72A /* AbilityTransformer.swift */,
 				9A27D81026A6CDF100B7F5CB /* Main.storyboard */,
@@ -102,6 +110,7 @@
 			children = (
 				9A27D82226A6CE1000B7F5CB /* CDManager.swift */,
 				9AE78DE726A6D78A004FA715 /* CDSaveDataProtocol.swift */,
+				9A4038C726AA5B2800BD3799 /* CDTransformerProtocol.swift */,
 				9A2066CF26A9593700425B1F /* NSManagerObject+Y.swift */,
 			);
 			path = CoreDataManager;
@@ -187,6 +196,9 @@
 			files = (
 				9AE78DE626A6D261004FA715 /* RunTimeTool.swift in Sources */,
 				9A2066D326A966B700425B1F /* UIImage+Y.swift in Sources */,
+				9A4038C826AA5B2800BD3799 /* CDTransformerProtocol.swift in Sources */,
+				9A1E293226AAB4940028194C /* TestModel.swift in Sources */,
+				9A4038CB26AA5C7600BD3799 /* NSObject+Y.swift in Sources */,
 				9A2066D026A9593800425B1F /* NSManagerObject+Y.swift in Sources */,
 				9A27D80F26A6CDF100B7F5CB /* ViewController.swift in Sources */,
 				9A27D82326A6CE1000B7F5CB /* CDManager.swift in Sources */,

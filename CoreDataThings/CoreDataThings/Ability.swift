@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class Ability: NSObject, NSSecureCoding
+public class Ability: NSObject, NSSecureCoding, CDTransformerProtocol
 {
     
     public let name: String
